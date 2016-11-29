@@ -54,7 +54,7 @@
             .sidebar {
                 background-color: #e00a5a;
                 height: 100%;/*400px;*/
-                width: 25%;
+                width: 20%;
                 float: left;
                 display: block;
             }
@@ -62,8 +62,39 @@
                 display: block;
                 background-color: white;
                 height: 100%;;
-                max-width: 75%;
-                margin-left: 25%;
+                max-width: 80%;
+                margin-left: 20%;
+            }
+            .sidelist {
+                text-align: right;
+            }
+            .sidelist li {
+                color: white;
+                font-size: 26px;
+                margin-top: 25px;
+                list-style-type: none;
+                
+                width: 150px;
+            }
+            .sidelist li a {
+                color: white;
+                border-radius: 7px;
+                display:inline-block;
+                background-color: #e00a5a;
+                font-size: 26px;
+                font-weight: bold;
+                text-decoration: none;
+                padding: 5px 20px;
+            }
+            .sidelist li a:hover {
+                color: white;
+                border-radius: 7px;
+                display:inline-block;
+                background-color: blue;
+                font-size: 26px;
+                font-weight: bold;
+                text-decoration: none;
+                padding: 5px 20px;
             }
 	</style>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -71,16 +102,17 @@
 <body>
 	<div id="wrapper">
 			<div id="top">
-                <a href="sedulogin.html">
+                <a href="dtdicker.github.io/seduhome">
 					<!-- dtdicker.github.io/ -->
                     <img src="dtdicker.github.io/logo_200px_black.png" alt="logo sedu" width="100" height="100">
                 </a>
 			</div>
             <div class="navi">
                 <ul class="navigationBar">
-                    <li><a href="#" class="nav">Home</a></li>
+                    <li><a href="dtdicker.github.io/seduhome" class="nav">Home</a></li>
                     <li><a href="#" class="nav">Calendar</a></li>
                     <li><a href="#" class="nav">Grades</a></li>
+                    <li><a href="dtdicker.github.io/seduenrollment" class="nav">Enrollment</a></li>
                     <li style="float:right; margin-left:50px;"><a href="#" class="nav">Settings</a></li>
                     <!--<li style="padding: 10px 10px; margin-bottom:30px; margin-left:20px; border-radius: 7px;"><a href="#" class="nav"><i class="material-icons">settings</i></a></li>-->
                 </ul>
@@ -88,7 +120,13 @@
 			<!-- copy the above for other pages -->
         <div class="sidebar">
             <ul class="sidelist">
-                
+                <li><a href="#">Main</a></li>
+                <li><a href="#">Grades</a></li>
+                <li><a href="#">Homework</a></li>
+                <li><a href="#">Tests&Quizes</a></li>
+                <li><a href="#">Lectures</a></li>
+                <li><a href="#">Roster</a></li>
+                <li><a href="#">Discussions</a></li>
             </ul>
         </div>
         <div class="content">
