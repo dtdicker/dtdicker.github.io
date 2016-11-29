@@ -41,23 +41,66 @@
 		text-decoration: underline;
 	  }
     </style>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   </head>
   <body>
     <div class="log_info">
 		<span class="log_element">
 			<label>Username:</label>
-			<input type="text" placeholder="username">
+			<input type="text" id="usertxt" placeholder="username" value="">
 		</span>
 		<span class="log_element">
 			<label>Password:</label>
-			<input type="password" placeholder="password">
+			<input type="password" id="passtxt" placeholder="password" value="">
 		</span>
 	</div>
 	<div class="log_butt">
-		<input type="button" class="login_button" value="Login">
+		<input type="button" class="login_button" onclick="checkLogin()" value="Login">
 	</div>
 	<div class="reg_organs">
 		<a href="#" class="reg_link">not registered?</a>
 	</div>
+      <script>
+          var userdata;
+          grabUserData("userdatabase.txt");
+          //alert(userdata);
+          //userdata = String(userdata);
+          //alert(userdata);
+          function grabUserData(txtfile) {
+              var raw = new XMLHttpRequest();
+              raw.open("GET", txtfile, false);
+              raw.onreadystatechange = function () {
+                  if (raw.readyState === 4) {
+                      if (raw.status === 200 || raw.status == 0) {
+                          var txt = raw.responseText;
+                          alert(txt);
+                          userdata =txt;
+                      }
+                  }
+              }
+              raw.send(null);
+          }
+
+          function checkLogin() {
+              var enteredUser = document.getElementById("usertxt").value;
+              var enteredPass = document.getElementById("passtxt").value;
+              
+              var list_users = userdata.split("\n");
+              //alert(list_users.length);
+              for (var i = 0; i < list_users.length; i++) {
+                  //alert(list_users[i]);
+                  var tmp = list_users[i].split(";;;")
+                  alert(enteredUser + " == " + tmp[0] + " "  + tmp[1] + " == "+ enteredPass);
+                  if (enteredUser == tmp[0]) {
+                      if (enteredPass == tmp[1]) {
+                          // sucessfully logged in
+                          alert("yay")
+                          window.location.replace("seduhome.html");
+                      }
+                  }
+              }
+              
+          }
+      </script>
   </body>
 </html>
