@@ -5,8 +5,8 @@
 	div#wrapper {
 				width:100%;
 				height:500px;
-				background-color: green;
-				outline: dashed;
+				background-color: #c0c0c0;
+				/*outline: dashed;*/
 			}
 			div#navigation {
 				display: inline-block;
@@ -21,12 +21,15 @@
 				margin 0;
 				padding 0;
                 margin-left: 50px;
+                margin-bottom: 10px;
+				display: block;
+				height: 25px;
 			}
 			.navigationBar  li {
 				float: left;
-				padding: 2px 20px;
+				padding: 2px 60px;
 				border-radius: 5px;
-				margin: 0px 50px;
+				margin: 0px 25px;
 				/*outline: solid;*/
                 background-color: #3d3d3d;
 			}
@@ -42,12 +45,28 @@
 				width: 100%;
 				/*outline: dashed;*/
 			}
+            .sidebar {
+                background-color: #e00a5a;
+                height: 100%;/*400px;*/
+                width: 25%;
+                float: left;
+                display: block;
+            }
+            .content {
+                display: block;
+                background-color: white;
+                height: 100%;;
+                max-width: 75%;
+                margin-left: 25%;
+            }
 	</style>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
 	<div id="wrapper">
 			<div id="top">
                 <a href="sedulogin.html">
+				<!-- dtdicker.github.io/ -->
                     <img src="dtdicker.github.io/logo_200px_black.png" alt="logo sedu" width="100" height="100">
                 </a>
                 <ul class="navigationBar" style="display:inline-flex;">
@@ -58,6 +77,14 @@
                 </ul>
 			</div>
 			<!-- copy the above for other pages -->
+        <div class="sidebar">
+            <ul class="sidelist">
+                
+            </ul>
+        </div>
+        <div class="content">
+
+        </div>
 	</div>
 	<script>
 	

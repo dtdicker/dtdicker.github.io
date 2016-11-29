@@ -5,8 +5,12 @@
 	div#wrapper {
 				width:100%;
 				height:500px;
-				background-color: green;
-				outline: dashed;
+				background-color: #c0c0c0;
+                outline-color: black;
+                border-color: black;
+                border-left: solid;
+                border-right: solid;
+				/*outline: dashed;*/
 			}
 			div#navigation {
 				display: inline-block;
@@ -21,12 +25,15 @@
 				margin 0;
 				padding 0;
                 margin-left: 50px;
+                margin-bottom: 10px;
+				display: block;
+				height: 25px;
 			}
 			.navigationBar  li {
 				float: left;
-				padding: 2px 20px;
+				padding: 2px 60px;
 				border-radius: 5px;
-				margin: 0px 50px;
+				margin: 0px 25px;
 				/*outline: solid;*/
                 background-color: #3d3d3d;
 			}
@@ -42,22 +49,94 @@
 				width: 100%;
 				/*outline: dashed;*/
 			}
+            .semester {
+                background-color: white;
+                border-bottom: solid;
+                border-bottom-color: blue;
+                display: block;
+                min-height: 45px;
+                margin: auto;
+                width: 100%;
+            }
+            .search {
+                background-color: white;
+                border-bottom: solid;
+                border-bottom-color: blue;
+                display: block;
+                min-height: 100px;
+            }
+            .register {
+                background-color: white;
+				border-bottom: solid;
+                border-bottom-color: blue;
+                display: block;
+                min-height: 100px;
+            }
+            .cart {
+                background-color: white;
+				border-bottom: solid;
+                border-bottom-color: blue;
+                display: block;
+                min-height: 100px;
+            }
+            .year_sel {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                overflow: hidden;
+                width: 25%;
+                margin: auto;
+                text-align: center;
+            }
+            .year_sel li {
+                display: inline-block;
+                background-color: lightblue;
+                color: white;
+                border-radius: 7px;
+				margin: 0 5px;
+				margin-top: 7px;
+            }
+            #year {
+                font-size: 20px;
+                background-color:white;
+                color:black;
+                padding: 5px;
+            }            
 	</style>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
 	<div id="wrapper">
 			<div id="top">
                 <a href="sedulogin.html">
+					<!-- dtdicker.github.io/ -->
                     <img src="dtdicker.github.io/logo_200px_black.png" alt="logo sedu" width="100" height="100">
                 </a>
                 <ul class="navigationBar" style="display:inline-flex;">
                     <li><a href="#" class="nav">Home</a></li>
                     <li><a href="#" class="nav">Calendar</a></li>
                     <li><a href="#" class="nav">Grades</a></li>
-                    <li style="float:right; margin-left:50px;"><a href="#" class="nav">Settings</a></li>
+					<li style="float:right; margin-left:50px;"><a href="#" class="nav">Settings</a></li>
+					<!--<li style="padding: 10px 10px; margin-bottom:30px; margin-left:20px; border-radius: 7px;"><a href="#" class="nav"><i class="material-icons">settings</i></a></li>-->
                 </ul>
 			</div>
 			<!-- copy the above for other pages -->
+        <div class="semester">
+            <ul class="year_sel">
+                <li id="left_arrow"><a href="#"><i class="material-icons">chevron_left</i></a></li>
+                <li><label id="year">2016</label></li>
+                <li id="right_arrow" style="margin-right: 10px;"><a href="#"><i class="material-icons">chevron_right</i></a></li>
+            </ul>
+        </div>
+        <div class="search">
+
+        </div>
+        <div class="register">
+
+        </div>
+        <div class="cart">
+
+        </div>
 	</div>
 	<script>
 	
