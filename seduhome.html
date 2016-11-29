@@ -43,6 +43,7 @@
 				height: 300px;
 				background-color: white;
 				margin-left: 15%;
+                text-align: center;
 			}
 			.navigationBar {
 				background-color: #c0c0c0;
@@ -75,46 +76,59 @@
 			}
 			.courses {
 				text-align: center;
-				outline: dotted;
+				/*outline: dotted;*/
 				list-style-type: none;
 			}
 			.courses li {
-			
-				outline: dotted;
+				/*outline: dotted;*/
+               
 				width: 75px;
 				margin: auto;
 				margin: 10px 0;
 				margin-right: 5px;
+                margin-top: 20px;
 			}
 			.courses li a{
-				outline: solid;
+				/*outline: solid;*/
 			}
+            #nextDues li {
+                padding: 5px;
+                display:block;
+            }
+            #nextDues li a {
+                margin: 5px 50px;
+                text-align: center;
+                color: black;
+            }
+            #nextDues li .courseName {
+            }
 		</style>
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	</head>
 	<body>
 		<div id="wrapper">
 			<div id="top">
-                <a href="sedulogin.html">
+                <a href="dtdicker.github.io/seduhome">
 					<!-- dtdicker.github.io/ -->
                     <img src="dtdicker.github.io/logo_200px_black.png" alt="logo sedu" width="100" height="100">
                 </a>
 			</div>
             <div class="navi">
                 <ul class="navigationBar">
-                    <li><a href="#" class="nav">Home</a></li>
+                    <li><a href="dtdicker.github.io/seduhome" class="nav">Home</a></li>
                     <li><a href="#" class="nav">Calendar</a></li>
                     <li><a href="#" class="nav">Grades</a></li>
+                    <li><a href="dtdicker.github.io/seduenrollment" class="nav">Enrollment</a></li>
                     <li style="float:right; margin-left:50px;"><a href="#" class="nav">Settings</a></li>
                     <!--<li style="padding: 10px 10px; margin-bottom:30px; margin-left:20px; border-radius: 7px;"><a href="#" class="nav"><i class="material-icons">settings</i></a></li>-->
                 </ul>
             </div>
 			<!-- copy the above for other pages -->
-			<div id="leftside" style="outline:solid; display:block;">
+			<div id="leftside">
 				<ul class="courses">
-					<li><a href="#">Class_1</a></li>
-					<li><a href="#">Class_2_and_some</a></li>
-					<li><a href="#">Class_3</a></li>
+					<li><a href="dtdicker.github.io/seducourse">Class_1</a></li>
+					<li><a href="dtdicker.github.io/seducourse">Class_2_and_some</a></li>
+					<li><a href="dtdicker.github.io/seducourse">Class_3</a></li>
 				</ul>
 			</div>
 			<div id="rightside">
@@ -123,10 +137,13 @@
                 </div>
 			</div>
 			<div id="main">
-               <div id="nextDue">
-                   <label style="font-size:20; text-align:center;">
-                       Assignments soon due
-                   </label>
+               <div id="nextDue" style="border-bottom-color:lightblue; border-bottom:solid;">
+                   <label style="font-size:20px; text-align:center;">Assignments soon due</label>
+                   <ul id="nextDues" style="list-style-type:none;">
+                       <li><a href="dtdicker.github.io/seducourse" class="courseName">class_1</a><a href="#" class="assignment">assignment_name</a><label class="dueDate">due_date</label></li>
+                       <li><a href="dtdicker.github.io/seducourse" class="courseName">class_2</a><a href="#" class="assignment">assignment_name</a><label class="dueDate">due_date</label></li>
+                       <li><a href="dtdicker.github.io/seducourse" class="courseName">class_3</a><a href="#" class="assignment">assignment_name</a><label class="dueDate">due_date</label></li>
+                   </ul>
                </div>
                <div id="feed">
 
